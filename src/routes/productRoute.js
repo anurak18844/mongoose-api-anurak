@@ -3,7 +3,7 @@ const app = express.Router();
 const productController = require('../controllers/productController');
 const auth = require('../middleware/auth');
 
-app.get("/", productController.getProducts);
+app.get("/", auth,productController.getProducts);
 
 app.get("/:id",productController.getProductById);
 

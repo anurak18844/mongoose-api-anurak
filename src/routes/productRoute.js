@@ -9,12 +9,12 @@ app.get("/:id",productController.getProductById);
 
 app.get("/name/:name",productController.getProductByName);
 
-app.post("/", auth,productController.addProduct);
+app.post("/",productController.addProduct);
 
-app.put("/:id", auth,productController.editWholeProduct);
+app.put("/:id",productController.editWholeProduct);
 
-app.patch("/:id",auth,productController.editProduct);
+app.patch("/:id",productController.editProduct);
 
-app.delete("/:id", auth,productController.deleteProduct);
+app.delete("/:id",productController.deleteProduct);
 
 module.exports = app;
